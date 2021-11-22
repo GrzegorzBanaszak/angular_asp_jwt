@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0Vhjj25Yl+1FKjSCKqqoaYITTMopGhqHoHBLkemJlMioNh325Xez8pdtuZ8+7px5IaKBQPtWNbKoJbSL6MgVUQ==",
+  "dgSpecHash": "YLCc4DKxy2iPqpK6z0zmzG2u/nPCPbwsbqZPSNULPIzzgt4wIbFoRUEStyIeGVWbunzI6iLJKuAhlCq7Iw2i0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\wobbo\\OneDrive\\Pulpit\\angular_asp_jwt\\DotnetClaimAutho\\DotnetClaimAutho.csproj",
   "expectedPackageFiles": [
@@ -111,7 +111,11 @@
     "C:\\Users\\wobbo\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\wobbo\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\wobbo\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\wobbo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\wobbo\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\wobbo\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512",
+    "C:\\Users\\wobbo\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\wobbo\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\wobbo\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

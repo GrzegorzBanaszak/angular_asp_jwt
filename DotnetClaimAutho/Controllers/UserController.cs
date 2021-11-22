@@ -1,5 +1,6 @@
 ﻿using DotnetClaimAutho.BindingModels;
 using DotnetClaimAutho.Data.Entites;
+using DotnetClaimAutho.DTO;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -33,6 +34,7 @@ namespace DotnetClaimAutho.Controllers
                 {
                     FullName = model.FullName,
                     Email = model.Email,
+                    UserName = model.Email,
                     DateCreated = DateTime.UtcNow,
                     DateModified = DateTime.UtcNow,
                 };
@@ -44,11 +46,25 @@ namespace DotnetClaimAutho.Controllers
                     return await Task.FromResult("User has been Registered");
                 }
 
-                return await Task.FromResult(string.Join(",", result.Errors.Select(x => x.Description.ToArray())));
+                return await Task.FromResult(string.Join(",", result.Errors.Select(x => x.Description).ToArray()));
             }
             catch (Exception exe)
             {
                 return await Task.FromResult(exe.Message);
+            }
+        }
+
+        [HttpGet("Users")]
+        public async Task<object> GetAllUser()
+        {
+            try
+            {
+                var users = _userManager.Users.Select(x => new UserDto(x.FullName,x.Email,x.UserName,x.DateCreated,x.DateModified));
+                return await Task.FromResult(users);
+            }
+            catch (Exception ex)
+            {
+                return await Task.FromResult(ex.Message);
             }
         }
     }
