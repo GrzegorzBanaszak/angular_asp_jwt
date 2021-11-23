@@ -67,5 +67,31 @@ namespace DotnetClaimAutho.Controllers
                 return await Task.FromResult(ex.Message);
             }
         }
+
+
+        [HttpPost("login")]
+        public async Task<object> Login([FromBody] LoginBindigModel model)
+        {
+            try
+            {
+                if(model.Email == "" || model.Password == "")
+                {
+                    return await Task.FromResult("Parameters are missing");
+                }
+
+                var result = await _signmanage.PasswordSignInAsync(model.Email, model.Password,false,false);
+                if (result.Succeeded)
+                {
+                    return await Task.FromResult("Login succesfully");
+                }
+                return await Task.FromResult("Invalid username or passworld");
+
+            }
+            catch (Exception ex)
+            {
+                return await Task.FromResult(ex.Message);
+            }
+        }
+
     }
 }
